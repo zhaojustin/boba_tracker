@@ -25,6 +25,7 @@ button {
     font-family: "Roboto Condensed" !important;
     letter-spacing: 0.1em;
     color: #363636 !important;
+    font-weight: 700;
 }
 
 .insert {
