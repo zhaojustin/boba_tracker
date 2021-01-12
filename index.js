@@ -27,7 +27,7 @@ app.set("view engine", "pug");
  */
 
 app.get("/", (req, res) => {
-    res.render("index", { title: "Home" });
+    res.render("index");
 });
 
 /**

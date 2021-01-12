@@ -5,8 +5,6 @@ h1 {
     color: #363636 !important;
 }
 
-.section {}
-
 h2 {
     font-family: "Roboto Condensed" !important;
     letter-spacing: 0.1em;
@@ -15,6 +13,20 @@ h2 {
     margin-top: 0;
 }
 
+.section {
+    padding-top: 3%;
+}
+
+.button-container {
+    padding-top: 4%;
+}
+
+button {
+    font-family: "Roboto Condensed" !important;
+    letter-spacing: 0.1em;
+    color: #363636 !important;
+}
+
 .insert {
-    color: #db5959 !important;
+    color: #408b4d !important;
 }

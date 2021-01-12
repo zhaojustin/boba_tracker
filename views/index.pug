@@ -1,11 +1,11 @@
 extends layout
 
 block layout-content
-  div.uk-container-large.uk-padding-large.uk-align-center
+  div.uk-container-small.uk-padding-large.uk-align-center
     .heading
         h1.uk-heading-medium Boba Tracker - 2021
         hr
-    .section
+    div#stats.section
         .uk-grid
             .uk-width-auto
                 h2 Bobas consumed: 
@@ -18,3 +18,14 @@ block layout-content
             .uk-width-auto
                 h2
                     span#money-spent.insert
+        .button-container
+            .uk-grid   
+                .uk-width-auto(style="padding-top: 2%")
+                    button.uk-button.uk-button-default 
+                        span(uk-icon="pencil").uk-margin-small-right
+                        span NEW ENTRY
+                .uk-width-auto(style="padding-top: 2%")
+                    button.uk-button.uk-button-default 
+                        span(uk-icon="database").uk-margin-small-right
+                        span SPREADSHEET
+            
