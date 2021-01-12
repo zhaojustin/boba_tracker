@@ -1,0 +1,28 @@
+{
+    "name": "boba_tracker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon ./index.js",
+        "start": "nodemon index.js -e ejs,js,css,html,jpg,png,scss"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zhaojustin/boba_tracker.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/zhaojustin/boba_tracker/issues"
+    },
+    "homepage": "https://github.com/zhaojustin/boba_tracker#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "pug": "^3.0.0"
+    }
+}
