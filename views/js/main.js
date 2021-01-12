@@ -1,0 +1,1 @@
+document.getElementById('money-spent').innerHTML = "$53"

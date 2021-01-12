@@ -1,13 +1,20 @@
 extends layout
 
 block layout-content
-  div.View
-    h1.Banner asdf
-    div.Message
-      div.Title
-        h3 Making the Best
-        h1 Food For Devs
-      span.Details Access the WHATABYTE Team Portal
-    div.NavButtons
-      a(href="/user")
-          div.NavButton Just dive in!
+  div.uk-container-large.uk-padding-large.uk-align-center
+    .heading
+        h1.uk-heading-medium Boba Tracker - 2021
+        hr
+    .section
+        .uk-grid
+            .uk-width-auto
+                h2 Bobas consumed: 
+            .uk-width-auto
+                h2
+                    span#boba-count.insert
+        .uk-grid
+            .uk-width-auto
+                h2 Money spent:
+            .uk-width-auto
+                h2
+                    span#money-spent.insert
