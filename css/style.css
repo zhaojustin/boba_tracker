@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap");
+
+h1 {
+  font-family: "Overpass Mono" !important;
+  font-weight: 700;
+  color: #3a3a3a;
+  font-size: 5em;
+}
+
+h2 {
+  font-family: "Overpass Mono" !important;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 2.75em;
+}
+
+p {
+  font-family: "Overpass Mono" !important;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 1.5em;
+}
+
+.uk-button {
+  font-family: "Overpass Mono";
+  background-color: #e5ffe3;
+  color: #3a3a3a;
+  font-size: 1.25em;
+}
+
+.dollar {
+  display: inline-block;
+  position: relative;
+}
+.dollar input {
+  padding-left: 23px;
+}
+.dollar:before {
+  position: absolute;
+  content: "$ ";
+  left: 8px;
+  top: 8px;
+}
+
+.var_span {
+  color: #4d8b48;
+}
