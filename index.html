@@ -12,6 +12,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.16/dist/js/uikit-icons.min.js"></script>
 
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <title>Boba Tracker - 2021</title>
 </head>
 
@@ -77,60 +80,65 @@
                     <span uk-icon="pencil" style="padding-right: 10px"></span>New Entry
                 </h2>
 
-                <!-- content -->
-                <table class="uk-table">
-                    <tbody>
-                        <!-- date -->
-                        <tr>
-                            <td class="uk-width-small">
-                                <p>date: </p>
-                            </td>
-                            <td>
-                                <input class="uk-input" type="text" placeholder="5/8">
-                            </td>
-                        </tr>
-                        <!-- drink name -->
-                        <tr>
-                            <td class="uk-width-small">
-                                <p>drink: </p>
-                            </td>
-                            <td>
-                                <input class="uk-input" type="text" placeholder="Jasmine Milk Tea">
-                            </td>
-                        </tr>
-                        <!-- toppings -->
-                        <tr>
-                            <td class="uk-width-small">
-                                <p>toppings: </p>
-                            </td>
-                            <td>
-                                <input class="uk-input" type="text" placeholder="Boba">
-                            </td>
-                        </tr>
-                        <!-- store name -->
-                        <tr>
-                            <td class="uk-width-small">
-                                <p>store: </p>
-                            </td>
-                            <td>
-                                <input class="uk-input" type="text" placeholder="Omomo Tea Shoppe">
-                            </td>
-                        </tr>
-                        <!-- price -->
-                        <tr>
-                            <td class="uk-width-small">
-                                <p>price: </p>
-                            </td>
-                            <td>
-                                <div class="dollar"><input class="uk-input" type="number" placeholder="5.00"></div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <form class="uk-form-horizontal" id="sendData">
 
-                <!-- continue button -->
-                <button class="uk-button uk-button-default uk-modal-close" type="button"
-                    style="margin-top: 5%">Done</button>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">date:</label>
+                        <div class="uk-form-controls">
+                            <input name="Date" class="uk-input" id="date" type="text" placeholder="5/8">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">drink:</label>
+                        <div class="uk-form-controls">
+                            <input name="Drink" class="uk-input" id="drink" type="text" placeholder="Jasmine Milk Tea">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">toppings:</label>
+                        <div class="uk-form-controls">
+                            <input name="Topping" class="uk-input" id="topping" type="text" placeholder="Boba">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">store:</label>
+                        <div class="uk-form-controls">
+                            <input name="Store" class="uk-input" id="store" type="text" placeholder="Omomo">
+                        </div>
+                    </div>
+
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-stacked-text">price:</label>
+                        <div class="uk-form-controls">
+                            <input name="Price" class="uk-input dollar" id="price" type="text" placeholder="5.00">
+                        </div>
+                    </div>
+
+                    <!-- continue button -->
+                    <button class="uk-button uk-button-default uk-modal-close" type="submit" onclick="sendData()"
+                        uk-toggle="target: #done-modal" style="margin-top: 5%">Done</button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- done modal -->
+        <div id="done-modal" uk-modal>
+            <div class="uk-modal-dialog uk-modal-body">
+                <!-- title -->
+                <h2 class="uk-modal-title" style="padding-bottom: 5%">
+                    <span uk-icon="check" style="padding-right: 10px"></span>Complete!
+                </h2>
+                <p>Logged:</p>
+                <p style="padding-top: 5%"><span id="drink_date"></span></p>
+                <p><span id="drink_name"></span></p>
+                <p><span id="drink_topping"></span></p>
+                <p><span id="drink_store"></span></p>
+                <p>$ <span id="drink_price"></span></p>
             </div>
         </div>
 

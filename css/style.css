@@ -28,6 +28,13 @@ p {
   font-size: 1.25em;
 }
 
+.uk-form-label {
+  font-family: "Overpass Mono" !important;
+  font-weight: 400;
+  color: #3a3a3a;
+  font-size: 1.2em;
+}
+
 .dollar {
   display: inline-block;
   position: relative;
