@@ -2,6 +2,39 @@
 var d = new Date();
 document.getElementById("date").value = (d.getMonth()+1)+"/"+d.getDate();
 
+// get data
+fetch("https://api.apispreadsheets.com/data/8288/").then(res=>{
+	if (res.status === 200){
+		// SUCCESS
+		res.json().then(data=>{
+			const bobaData = data;
+            console.log(bobaData);
+
+            // set length
+            var length = 0;
+            for(var i in bobaData.data) {
+                length++;
+            }
+            document.getElementById("drinks_amount").innerHTML = length;
+
+            // set total cost
+            var cost = 0;
+            for(var i = 0; i<length; i++) {
+                cost += parseFloat(bobaData.data[i].Price.substring(1));
+            }
+            document.getElementById("total_cost").innerHTML = '$' + cost.toFixed(2);
+
+            // set recent date
+            var date = bobaData.data[length-1].Date;
+            document.getElementById("recent_time").innerHTML = date;
+
+		}).catch(err => console.log(err))
+	}
+	else{
+		// ERROR
+	}
+})
+
 // send information to google sheets
 function sendData() {
 
