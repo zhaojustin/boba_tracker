@@ -85,41 +85,47 @@
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">date:</label>
                         <div class="uk-form-controls">
-                            <input name="Date" class="uk-input" id="date" type="text" placeholder="5/8">
+                            <input name="Date" class="uk-input" id="date" type="text" placeholder="5/8" required>
                         </div>
                     </div>
 
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">drink:</label>
                         <div class="uk-form-controls">
-                            <input name="Drink" class="uk-input" id="drink" type="text" placeholder="Jasmine Milk Tea">
+                            <input name="Drink" class="uk-input" id="drink" type="text" placeholder="Jasmine Milk Tea"
+                                required>
                         </div>
                     </div>
 
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">toppings:</label>
                         <div class="uk-form-controls">
-                            <input name="Topping" class="uk-input" id="topping" type="text" placeholder="Boba">
+                            <input name="Topping" class="uk-input" id="topping" type="text" placeholder="Boba" required>
                         </div>
                     </div>
 
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">store:</label>
                         <div class="uk-form-controls">
-                            <input name="Store" class="uk-input" id="store" type="text" placeholder="Omomo">
+                            <input name="Store" class="uk-input" id="store" type="text" placeholder="Omomo" required>
                         </div>
                     </div>
 
                     <div class="uk-margin">
                         <label class="uk-form-label" for="form-stacked-text">price:</label>
                         <div class="uk-form-controls">
-                            <input name="Price" class="uk-input dollar" id="price" type="text" placeholder="5.00">
+                            <input name="Price" class="uk-input dollar" id="price" type="text" placeholder="5.00"
+                                required>
                         </div>
                     </div>
 
-                    <!-- continue button -->
+                    <!-- submit button -->
                     <button class="uk-button uk-button-default uk-modal-close" type="submit" onclick="sendData()"
-                        uk-toggle="target: #done-modal" style="margin-top: 5%">Done</button>
+                        uk-toggle="target: #done-modal" style="margin-top: 5%">Submit</button>
+
+                    <!-- cancel button -->
+                    <button class="uk-button uk-button-default uk-modal-close"
+                        style="margin-top: 5%; margin-left: 3%; background-color: white">Cancel</button>
 
                 </form>
 
